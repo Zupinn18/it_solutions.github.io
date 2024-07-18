@@ -53,7 +53,19 @@ header {
   height: 80px;
   /* Adjust height as necessary */
 }
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
 
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: white;
+  margin: 4px 0;
+  border-radius: 1px;
+}
 .nav-links {
   display: flex;
   list-style: none;
@@ -649,4 +661,103 @@ strong.link-email-footer {
 
 .footer-link:hover {
   color: #FFFFFF;
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #000000be;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+  }
+
+  .nav-links li {
+      text-align: center;
+      margin: 10px 0;
+  }
+
+  .menu-toggle {
+      display: flex;
+  }
+
+  .nav-links.active {
+      display: flex;
+      margin-top: 20px;
+  }
+
+  main .content h1{
+    font-size: 1.1rem !important;
+  }
+
+  main .content button{
+    margin: 20px 0 20px 0 !important;
+  }
+  .container {
+    position: relative;
+    margin: 50px;
+    background-color: #295512b4;
+    margin-bottom: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.5rem;
+}
+  .company .container{
+    margin: 10px;
+  }
+  .company .container i{
+    font-size: 1.5rem;
+  }
+
+  .company li{
+    font-size: 1rem;
+  }
+  .company ul{
+    padding: -90px !important;
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: 30px;
+    margin-top: 100px;
+    margin-bottom: -100px;
+}
+.define-us{
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+.define-us img{
+  max-width: 300px;
+  height: auto;
+}
+.define-us-text{
+  margin: 0;
+  text-align: center;
+}
+.define-us-text h2{
+  font-size: 1.5rem !important;
+  text-align: center;
+}
+
+.why-choose-us{
+  margin-top: 1200px !important;
+}
+
+.why-choose-us .text{
+  margin: 10px !important;
+}
+
 }
