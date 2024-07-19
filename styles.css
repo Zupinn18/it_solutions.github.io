@@ -272,6 +272,22 @@ button {
     margin: 20px;
 }
 
+.solution-container {
+  position: relative;
+  margin: 50px;
+  background-color: #295512b4;
+  margin-bottom: 200px;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  font-size: 1.5rem;
+}
+
+.solution-container ul li{
+    color: white;
+  
+    margin: 20px;
+}
 .define-us {
   margin-top: 200px;
     position: absolute;
@@ -414,7 +430,7 @@ img.failory-logo-image {
   border-width: 0;
   box-sizing: border-box;
   display: inline-block;
-  float: left;
+  /* float: left; */
   max-width: 100%;
   vertical-align: middle;
 }
@@ -664,8 +680,71 @@ strong.link-email-footer {
 }
 
 
+.solution-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
-@media (max-width: 768px) {
+.solution-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.qna{
+  position: relative;
+  color: white;
+  margin: 50px;
+  margin-top: -100px;
+}
+
+.qna .qna-qa{
+margin-top: -30px;
+}
+
+
+.qna .qna-heading h1{
+  text-align: center;
+}
+.qna .qna-heading p{
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+
+.qna .qna-qa p{
+  margin-right: 60px;
+
+}
+
+
+@media (max-width: 1024px) {
+  .solution-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    white-space: nowrap;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: flex-start;
+    margin: 10px;
+}
+.solution-container ul {
+    display: inline-block;
+    flex: none;
+    white-space: normal;
+}
+
+.solution-container ul a {
+    display: inline-block;
+    width: 200px; /* Adjust as needed */
+}
+
+.solution-container ul li {
+    margin: 10px;
+    text-align: center;
+    white-space: normal;
+}
   .nav-links {
       display: none;
       flex-direction: column;
@@ -734,6 +813,7 @@ strong.link-email-footer {
     margin-top: 100px;
     margin-bottom: -100px;
 }
+
 .define-us{
   display: flex;
   flex-direction: column;
