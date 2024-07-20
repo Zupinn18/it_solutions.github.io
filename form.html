@@ -126,7 +126,7 @@ color: #ffffff;
             font-family: 'Poppins', sans-serif;
             background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
             /* : text;-webkit-background-clip */
-            -webkit-text-fill-color: transparent;
+           
         }
 
         .container form {
@@ -282,30 +282,31 @@ color: #ffffff;
         </nav>
     </header>
     <div class="container">
-        <div class="text">
+        <div class="text" style="color: white;">
             Contact us
         </div>
-        <form action="#">
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="626ca559-95f9-47ec-b828-f1dd984fef7a">
             <div class="form-row">
                 <div class="input-data">
-                    <input type="text" required>
+                    <input type="text" name="FirstName" required>
                     <div class="underline"></div>
                     <label for="">First Name</label>
                 </div>
                 <div class="input-data">
-                    <input type="text" required>
+                    <input type="text" name="LastName" required>
                     <div class="underline"></div>
                     <label for="">Last Name</label>
                 </div>
             </div>
             <div class="form-row">
                 <div class="input-data">
-                    <input type="text" required>
+                    <input type="text" name="Email" required>
                     <div class="underline"></div>
                     <label for="">Email Address</label>
                 </div>
                 <div class="input-data">
-                    <input type="text" required>
+                    <input type="text" name="services" required>
                     <div class="underline"></div>
                     <label for="">Services</label>
                     <!-- webs dev
@@ -341,7 +342,7 @@ color: #ffffff;
                 <div class="contact-number">
                     <h3>give us a call</h3>
                     <ul>
-                        <li>+91-9760688893</li>
+                        <li>+91-9119003513</li>
                     </ul>
                 </div>
                 <div class="social-details">

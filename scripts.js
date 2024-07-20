@@ -1,4 +1,18 @@
 // JavaScript code to cycle through images every second
+
+const joinUsBtn = document.getElementById('join-us-btn');
+const popupForm = document.getElementById('popup-form');
+const closePopupBtn = document.getElementById('close-popup-btn');
+
+joinUsBtn.addEventListener('click', () => {
+  popupForm.style.display = 'block';
+});
+
+closePopupBtn.addEventListener('click', () => {
+  popupForm.style.display = 'none';
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
     const images = [
         "assets/bg_image/resiged/9.jpg",

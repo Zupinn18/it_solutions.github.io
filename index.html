@@ -33,12 +33,26 @@
     <div class="main-container">
         <main>
             <div class="content" style="color: white; text-shadow: black; text-align: center;">
-                <h1 style="font-size: 3rem;">WE ENABLE DEVELOPERS TO BUILD AND <br />
-                    PUBLISH WONDERFUL THINGS </h1>
-                <button class="join-us">JOIN US</button>
-                <!-- <button class="watch-video">WATCH VIDEO</button> -->
+              <h1 style="font-size: 3rem;">WE ENABLE DEVELOPERS TO BUILD AND <br />
+                PUBLISH WONDERFUL THINGS </h1>
+              <button class="join-us" id="join-us-btn">JOIN US</button>
+              <!-- <button class="watch-video">WATCH VIDEO</button> -->
             </div>
-        </main>
+            <!-- Add the popup form HTML structure -->
+            <div class="popup-form" id="popup-form">
+              <div class="popup-form-content">
+                <h2>Join Us</h2>
+                <form action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="626ca559-95f9-47ec-b828-f1dd984fef7a">
+                  <!-- Add your form fields here, e.g., -->
+                  <input type="text" name="name" placeholder="Name">
+                  <input type="email" name="email" placeholder="Email">
+                  <button type="submit">Submit</button>
+                </form>
+                <button class="close-popup" id="close-popup-btn">X</button>
+              </div>
+            </div>
+          </main>
         <div class="company" id="company">
             <h1 style="text-align: center;">Profile</h1>
             <div class="container">
@@ -47,7 +61,7 @@
                         <li style="margin: 30px;"><i class="fa-solid fa-file-pen fa-2xl"
                                 style="color: #000000;"></i>About us</li>
                     </a>
-                    <a href="">
+                    <a href="404.html">
                         <li style="margin: 30px;"><i class="fa-solid fa-users fa-2xl" style="color: #000000;"></i> Our Partners</li>
                     </a>
                     <a href="our_process.html">
@@ -60,11 +74,11 @@
                         <li style="margin: 30px;"><i class="fa-solid fa-paste fa-2xl" style="color: #000000;"></i> How
                             we work</li>
                     </a>
-                    <a href="">
+                    <a href="404.html">
                         <li style="margin: 30px;"><i class="fa-solid fa-book fa-2xl" style="color: #000000;"></i> Blog
                         </li>
                     </a>
-                    <a href="">
+                    <a href="404.html">
                         <li style="margin: 30px;"><i class="fa-solid fa-briefcase fa-2xl" style="color: #000000;"></i>
                             Career</li>
                     </a>
@@ -410,8 +424,7 @@
         </div> -->
         <div class="container-footer w-container" style="background-image: url(assets/bg_image/footer_bg/2.jpg);">
             <div class="w-row">
-                <div class="footer-column w-clearfix w-col w-col-4"><img src="#" alt="" width="40"
-                        class="failory-logo-image">
+                <div class="footer-logo footer-column w-clearfix w-col w-col-4">
                     <!-- <h3 class="footer-failory-name">label</h3>
                     <p class="footer-description-failory">Lorem ipsum dolor sit amet.<br></p> -->
                     <img src="assets/century_logo.png" alt="" style="height: 250px; margin-left: -50px;">
