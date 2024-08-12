@@ -936,7 +936,7 @@ margin-top: -30px;
       position: absolute;
       top: 60px;
       left: 0;
-      background-color: #000000be;
+      background-color: #0F4F2F;
       border: 1px solid #fff;
       border-radius: 4px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -948,6 +948,14 @@ margin-top: -30px;
       margin: 10px 0;
   }
 
+  .nav-links li a{
+    text-align: center;
+    margin: 10px 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+
   .menu-toggle {
       display: flex;
   }
@@ -956,12 +964,31 @@ margin-top: -30px;
       display: flex;
       margin-top: 20px;
   }
+.navbar button{
+  padding: 10px;
+  margin: 20px;
+}
 
-  main .content h1{
-    font-size: 1.1rem !important;
+.dropdown-content {
+  display: none;
+  position: fixed;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60vw;
+  background-color: #0F4F2F;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  border-radius: 10px;
+}
+  .main .content h1{
+    font-size: 1.5rem !important;
+    margin: 10px !important;
   }
 
-  main .content button{
+  .main .content button{
     margin: 20px 0 20px 0 !important;
   }
   .container {
@@ -1035,6 +1062,16 @@ margin-top: -30px;
   right: 70px;
   background-color:  rgb(242, 78, 78);
   color: white;
+}
+
+
+div.column-center-mobile.w-col.w-col-4 {
+  margin-left: -210px !important;
+  margin-top: 450px;
+}
+
+div.column-center-mobile.w-col.w-col-4 a img{
+  color: #0F4F2F !important;
 }
 
 }

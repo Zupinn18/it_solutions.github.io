@@ -151,3 +151,37 @@ function myFunction() {
     var element = document.body;
     element.classList.toggle("dark-mode");
   }
+
+// portfolio filter js
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const cards = document.querySelectorAll('.card');
+
+    // Function to filter cards
+    function filterCards(category) {
+      cards.forEach(card => {
+        if (category === 'all' || card.getAttribute('data-category') === category) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Initial display of all cards
+    filterCards('all');
+
+    // Add click event listeners to buttons
+    buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Remove 'active' class from all buttons
+        buttons.forEach(btn => btn.classList.remove('active'));
+        // Add 'active' class to the clicked button
+        this.classList.add('active');
+
+        const category = this.getAttribute('data-category');
+        filterCards(category);
+      });
+    });
+  });
