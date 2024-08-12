@@ -37,23 +37,30 @@ body {
 
 
 .card {
-  width: 200px;
+  width: 400px;
   padding: 30px;
-  border: 1px solid #dddddd;
+  /* border: 1px solid #dddddd; */
   border-radius: 4px;
-  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  /* box-shadow: 2px 2px 12px rgba(0,0,0,0.1); */
   display: none; /* Hide all cards initially */
-  background-color: #8ECD1B;
+  background-color: #ffffff00;
   border-radius: 20px;
 }
 
 .card a{
   color: #0F4F2F;
   text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.card  p{
+  color: #0F4F2F;
+  text-decoration: none;
+  font-size: 1rem;
 }
 
 .card img{
-  width: 200px;
+  width: 400px;
   padding: -20px;
   margin: 10px;
   
