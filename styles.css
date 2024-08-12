@@ -1,20 +1,23 @@
 body, html {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    
-    
+  
+    font-family: "Bebas Neue", sans-serif;
+    font-optical-sizing: auto;
+    background-color: #FFFFFF;
+    font-style: normal;
     
 }
 
+
 .main-container::before {
     content: "";
-    position: fixed; /* Use fixed to cover the entire viewport */
+    position: relative; /* Use fixed to cover the entire viewport */
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Adjust the opacity as needed */
+    /* background-color: rgba(0, 0, 0, 0.5);  */
     z-index: 0; /* Ensure the overlay is behind the main content */
     pointer-events: none; /* Allow interaction with elements below the overlay */
 }
@@ -24,11 +27,14 @@ header, main, .card-container .define-us{
     position: relative; /* Ensure these elements are positioned above the overlay */
     z-index: 1; /* Higher z-index than the overlay */
 }
+
+
 .main-container{
   background-image: url('assets/building.jpg');
+  /* background-color: rgba(0, 0, 0, 0.5); */
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   overflow-x: hidden;
     position: relative;
     height: 100%;
@@ -62,10 +68,9 @@ header, main, .card-container .define-us{
 }
 
 .popup-form form button{ 
-  background-color: rgba(0, 0, 0, 0.63);
+  background-color: #8ECD1B;
 }
 .popup-form-content {
-  
   background-color: #fff;
   padding: 20px;
   border: 1px solid #ddd;
@@ -82,8 +87,8 @@ header, main, .card-container .define-us{
 }
 
 header {
-    background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0));
-
+    /* background: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0, 0, 0)); */
+background-color: #ffffff;
     text-align: center;
     width: 100%;
 }
@@ -99,7 +104,8 @@ header {
 }
 
 .logo {
-  height: 80px;
+  height: 50px;
+  margin: 20px;
   /* Adjust height as necessary */
 }
 .menu-toggle {
@@ -111,51 +117,94 @@ header {
 .menu-toggle .bar {
   height: 3px;
   width: 25px;
-  background-color: white;
+  background-color: #8ECD1B;
   margin: 4px 0;
   border-radius: 1px;
 }
+
 .nav-links {
-  display: flex;
-  list-style: none;
+  list-style-type: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
+  background-color: #ffffff;
 }
 
 .nav-links li {
-  margin-left: 10px;
+  position: relative;
 }
 
 .nav-links a {
+  padding: 14px 20px;
   text-decoration: none;
-  color: #ffffff;
-  font-size: 16px;
-  transition: color 0.3s;
-  font-size: 1.5rem;
+  color: black;
 }
 
-/* .nav-links a:hover {
-  color: #ffffff;
-} */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
+.nav-links a:hover {
+  background-color: #8ECD1B;
 }
 
-nav ul li {
-    margin: 0 15px;
+.dropdown-content {
+  display: none;
+  position: fixed;
+  top: 27%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  background-color: #0F4F2F;
+  color: rgb(255, 255, 255);
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+  border-radius: 10px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+.nav-item:hover .dropdown-content {
+  display: block;
 }
 
-main {
+.dropdown-columns {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+.dropdown-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dropdown-content ul li {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: 100;
+
+}
+
+.dropdown-content a:hover {
+  background-color: #8ECD1B;
+  color: black;
+  
+}
+
+.navbar button{
+  background-color: #8ECD1B;
+}
+
+.navbar button a{
+  color: black;
+  font-weight: 100;
+}
+
+
+.main {
     
     background-size: cover;
     background-position: center;
@@ -183,11 +232,12 @@ button {
 }
 
 .join-us {
-  background-color: #295512;
-  color: white;
+  background-color: #8ECD1B;
+  color: rgb(0, 0, 0);
   margin-right: 500px;
   margin-left: 500px;
   border-radius: 55px;
+  font-weight: bolder;
 }
 
 .watch-video {
@@ -202,6 +252,18 @@ button {
     color: red;
     margin-right: 8px;
 }
+
+
+.services-cards h1{
+  text-align: center;
+  margin: 30px;
+  color: #0F4F2F;
+}
+
+.services-cards{
+  margin: 30px;
+}
+
 
 .card-container {
     display: grid;
@@ -244,7 +306,7 @@ button {
 }
 
 .card-front {
-    background: #000000b1;
+    background: #0F4F2F;
     border-radius: 10px;
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -279,10 +341,65 @@ button {
 /* .card:hover .card-back .hide{
     transform: rotateY(360deg);
 } */
+@keyframes slides {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
 
+.logos {
+  overflow: hidden;
+  padding: 30px 0px;
+  white-space: nowrap;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.logos h1{
+  color: #0F4F2F ;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.logos:before, .logos:after {
+  position: absolute;
+  top: 0;
+  content: '';
+  width: 250px;
+  height: 100%;
+  z-index: 2;
+}
+
+.logos:before {
+  left: 0;
+  /* background: linear-gradient(to left, rgb(255, 255, 255), rgb(255, 255, 255)); */
+}
+
+.logos:after {
+  right: 0;
+  /* background: linear-gradient(to right, rgba(0, 0, 0, 0), rgb(255, 255, 255)); */
+}
+
+.logo_items {
+  display: inline-block;
+  animation: 35s slides infinite linear;
+}
+
+.logos:hover .logo_items {
+  animation-play-state: paused;
+}
+
+.logo_items img{
+  height: 100px;
+}
 .company{
   position: relative;
   color: white;
+  background-color: #FFFFFF;
 }
 .company ul {
   list-style-type: none;
@@ -338,14 +455,18 @@ button {
     margin: 20px;
 }
 .define-us {
-  margin-top: 200px;
+  margin-top: 100px;
     position: absolute;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
     gap: 20px; /* Adjust the gap between the image and text as needed */
-    color: white;
+    
+    background-color: #0F4F2F;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 20px;
 }
 
 .define-us img {
@@ -360,16 +481,29 @@ button {
 
 .define-us h2 {
     margin-top: 0;
+    color: #8ECD1B;
 }
+
+
 
 .define-us p {
     margin-bottom: 0;
+    color: #FFFFFF;
 }
 
 .define-us-text{
     margin: 30px;
 }
 
+.why-choose-us .text h1 {
+  margin-top: 0;
+  color: #0F4F2F;
+  font-weight: 800;
+}
+
+.why-choose-us{
+  margin: 30px;
+}
 
 .testimonial h2{
     position: relative;
@@ -486,7 +620,7 @@ img.failory-logo-image {
 
 h3.footer-failory-name {
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #0F4F2F;
   display: block;
   font-family: Lato, sans-serif;
   font-size: 20px;
@@ -499,7 +633,7 @@ h3.footer-failory-name {
 
 p.footer-description-failory {
   box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.8);
+  color: #0F4F2F;
   display: block;
   font-family: Lato, sans-serif;
   font-size: 17px;
@@ -546,7 +680,7 @@ div.w-col.w-col-7.w-col-small-6.w-col-tiny-7 {
 
 h3.footer-titles {
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #0F4F2F;
   display: block;
   font-family: Lato, sans-serif;
   font-size: 20px;
@@ -559,7 +693,7 @@ h3.footer-titles {
 
 p.footer-links {
   box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.8);
+  color: #0F4F2F;
   display: block;
   font-family: Lato, sans-serif;
   font-size: 17px;
@@ -573,7 +707,7 @@ p.footer-links {
 a {
   background-color: transparent;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #0F4F2F;
   font-family: Lato, sans-serif;
   font-size: 17px;
   font-weight: 400;
@@ -591,12 +725,12 @@ a:hover {
 
 span.footer-link {
   box-sizing: border-box;
-  color: rgba(255, 255, 255, 0.8);
-  font-weight: 300;
+  color: #0F4F2F;
+  font-weight: 500;
 }
 
 span.footer-link:hover {
-  color: #FFFFFF;
+  color: #0F4F2F;
   font-weight: 400;
 }
 
@@ -632,7 +766,7 @@ div.column-center-mobile.w-col.w-col-4 {
 a.footer-social-network-icons.w-inline-block {
   background-color: transparent;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #0F4F2F;
   display: inline-block;
   font-family: Lato, sans-serif;
   font-size: 17px;
@@ -647,6 +781,7 @@ a.footer-social-network-icons.w-inline-block {
 
 a.footer-social-network-icons.w-inline-block:active {
   outline: 0;
+  color: #8ECD1B;
 }
 
 a.footer-social-network-icons.w-inline-block:hover {
@@ -701,7 +836,7 @@ strong.link-email-footer {
 }
 
 .footer-titles {
-  color: #FFFFFF;
+  color: #0F4F2F;
   font-family: Lato, sans-serif;
   font-size: 20px;
   font-weight: 900;

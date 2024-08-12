@@ -14,6 +14,39 @@ closePopupBtn.addEventListener('click', () => {
 
 
 document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('.nav-item');
+  
+    navItems.forEach(item => {
+      const navLink = item.querySelector('.nav-link');
+      const dropdown = item.querySelector('.dropdown-content');
+  
+      navLink.addEventListener('click', (e) => {
+        e.preventDefault();
+  
+        // Close all other dropdowns
+        document.querySelectorAll('.dropdown-content').forEach(dd => {
+          if (dd !== dropdown) {
+            dd.style.display = 'none';
+          }
+        });
+  
+        // Toggle the clicked dropdown
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  
+    // Close dropdown if clicking outside
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('.nav-item')) {
+        document.querySelectorAll('.dropdown-content').forEach(dd => {
+          dd.style.display = 'none';
+        });
+      }
+    });
+  });
+  
+
+document.addEventListener('DOMContentLoaded', () => {
     const images = [
         "assets/bg_image/resiged/9.jpg",
         "assets/bg_image/resiged/24.jpg", // Add your second image path here
@@ -104,9 +137,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-const mobileMenu = document.getElementById('mobile-menu');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', () => {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
 
-mobileMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
 });
+
+
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
